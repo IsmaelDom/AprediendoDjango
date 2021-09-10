@@ -46,3 +46,6 @@ def pagina(request):
         <h1>Página de la web</h1>
         <p>Crado en 2021</p>
     """)
+
+def contacto(request, nombre, apellidos):
+    return HttpResponse(layout + f"<h2>Contacto {nombre} {apellidos}</h2>")
