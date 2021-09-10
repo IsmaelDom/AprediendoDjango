@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 layout = """
@@ -13,6 +13,9 @@ layout = """
         </li>
         <li>
             <a href="/pagina-pruebas">Pagina de Pruebas</a>
+        </li>
+        <li>
+            <a href="/contacto">Contacto</a>
         </li>
     </ul>
     <hr/>
@@ -41,7 +44,11 @@ def hola_mundo(request):
         <h3>Bienvenido</h3>
     """)
 
-def pagina(request):
+def pagina(request, redirigir = 0):
+    if redirigir == 1:
+        #return redirect('/inicio/') # Forma de redirigir sin parametros
+        return redirect('contacto', nombre = "Persona", apellidos = "Anonima") # Redirigir con parametros
+
     return HttpResponse(layout + """
         <h1>Página de la web</h1>
         <p>Crado en 2021</p>
