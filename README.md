@@ -7,3 +7,8 @@ python manage.py migrate
 
 ##Para iniciar el servidor se utiliza el siguiente comando
 python manage.py runserver
+
+##Comando de ayuda
+python manage.py help
+
+***By Ismael***
