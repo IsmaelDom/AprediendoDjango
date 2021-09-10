@@ -11,4 +11,7 @@ python manage.py runserver
 ##Comando de ayuda
 python manage.py help
 
+##Creación de una app
+python manage.py startapp miapp
+
 ***By Ismael***
