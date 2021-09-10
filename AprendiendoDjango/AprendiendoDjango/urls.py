@@ -28,5 +28,7 @@ urlpatterns = [
     path('hola-mundo/', views.hola_mundo, name="hola-mundo"),
     path('pagina-pruebas/', views.pagina, name="pagina"),
     # Se agrega una ruta que recibe un parametro de tipo string
-    path('contacto/<str:nombre>/<str:apellidos>', views.contacto, name="contacto")
+    path('contacto/<str:nombre>/<str:apellidos>', views.contacto, name="contacto"),
+    path('contacto/', views.contacto, name="contacto"),
+    path('contacto/<str:nombre>/', views.contacto, name="contacto")
 ]
