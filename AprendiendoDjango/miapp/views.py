@@ -40,20 +40,14 @@ def index(request):
     return render(request, 'index.html')
 
 def hola_mundo(request):
-    return HttpResponse(layout + """
-        <h1>Hola Mundo desde Django</h1>
-        <h3>Bienvenido</h3>
-    """)
+    return render(request, 'hola_mundo.html')
 
 def pagina(request, redirigir = 0):
     if redirigir == 1:
         #return redirect('/inicio/') # Forma de redirigir sin parametros
         return redirect('contacto', nombre = "Persona", apellidos = "Anonima") # Redirigir con parametros
 
-    return HttpResponse(layout + """
-        <h1>Página de la web</h1>
-        <p>Crado en 2021</p>
-    """)
+    return render(request, 'pagina.html')
 
 def contacto(request, nombre="", apellidos=""):
     html = ""
