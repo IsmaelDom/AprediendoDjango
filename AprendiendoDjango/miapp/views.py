@@ -36,7 +36,8 @@ def index(request):
 
     html += "</ul>"
 
-    return HttpResponse(layout + html)
+    # Para retornar una vista se usa render
+    return render(request, 'index.html')
 
 def hola_mundo(request):
     return HttpResponse(layout + """

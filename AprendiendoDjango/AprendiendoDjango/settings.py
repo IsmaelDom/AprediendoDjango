@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Se tiene que agregar la app creada para que reconozca los templates
+    'miapp'
 ]
 
 MIDDLEWARE = [
