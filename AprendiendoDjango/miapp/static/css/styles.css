@@ -83,7 +83,7 @@ nav ul li a:hover {
 .barra {
     width: 1250px;
     margin: 0 auto;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
 }
 
 /*Picos que se muestran debajo de la barra de navegación*/
@@ -108,4 +108,43 @@ nav ul li a:hover {
     height: 10px;
     background: #2B2F30;
     float: left;
+}
+
+/*Estilos contenido central*/
+#content {
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.box {
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.title {
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+footer {
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
 }
