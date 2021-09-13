@@ -1,2 +1,11 @@
-<h1>Hola Mundo desde Django</h1>
-<h3>Bienvenido</h3>
+<!--Se hereda el layout-->
+{% extends 'layout.html' %}
+
+{% block title %}Hello World!{% endblock %}
+
+{% block content %}
+
+    <h1>Hola Mundo desde Django</h1>
+    <h3>Bienvenido</h3>
+
+{% endblock %}
