@@ -36,10 +36,12 @@ def index(request):
 
     html += "</ul>"
 
+    lenguajes = ['Javascript', 'Python', 'C', 'C#', 'PHP']
     # Para retornar una vista se usa render
     return render(request, 'index.html', {
         'title': 'Inicio',
-        'mi_variable': 'Soy un dato que esta en la vista'
+        'mi_variable': 'Soy un dato que esta en la vista',
+        'lenguajes':  lenguajes
     })
 
 def hola_mundo(request):

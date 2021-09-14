@@ -20,6 +20,13 @@
         <strong>El nombre no existe</strong>
     {% endif %}
 
+    <h3>Listado de lenguajes de programación:</h3>
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>{{ lenguaje }}</li>
+        {% endfor %}
+    </ul>
+    
     <p>Años hasta el 2050:</p>
 
 {% endblock %}
