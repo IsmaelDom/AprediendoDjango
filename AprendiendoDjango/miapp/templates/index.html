@@ -23,10 +23,21 @@
     <h3>Listado de lenguajes de programación:</h3>
     <ul>
         {% for lenguaje in lenguajes %}
-            <li>{{ lenguaje }}</li>
+        {% comment "Metodos de los for" %}
+            forloop.first -> devuelve true o false si es el primer elemento de la lista
+            forloop.last -> devuelve true o false si es el último elemento de la lista
+            forloop.counter -> devuelve el numero del elemento en la lista
+            forloop.counter0 -> devuelve el numero del elemento en la lista inicia desde el 0
+            forloop.revcounter -> devuelve el numero del elemento en la lista de manera inversa
+            forloop.revcounter0 -> devuelve el numero del elemento en la lista de manera inversa inicia desde 0
+        {% endcomment %}
+            <li>{{forloop.counter}}.-{{ lenguaje }}</li>
+        {% comment "Comentario sobre empty" %} empty -> valida si la lista esta vacia {% endcomment %}
+        {% empty %}
+            <p>No hay lenguajes por mostrar</p>
         {% endfor %}
     </ul>
-    
+
     <p>Años hasta el 2050:</p>
 
 {% endblock %}

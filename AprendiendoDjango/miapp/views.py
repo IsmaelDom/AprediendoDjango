@@ -37,6 +37,7 @@ def index(request):
     html += "</ul>"
 
     lenguajes = ['Javascript', 'Python', 'C', 'C#', 'PHP']
+
     # Para retornar una vista se usa render
     return render(request, 'index.html', {
         'title': 'Inicio',
