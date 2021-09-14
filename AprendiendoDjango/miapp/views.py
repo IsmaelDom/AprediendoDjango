@@ -37,7 +37,10 @@ def index(request):
     html += "</ul>"
 
     # Para retornar una vista se usa render
-    return render(request, 'index.html')
+    return render(request, 'index.html', {
+        'title': 'Inicio',
+        'mi_variable': 'Soy un dato que esta en la vista'
+    })
 
 def hola_mundo(request):
     return render(request, 'hola_mundo.html')
