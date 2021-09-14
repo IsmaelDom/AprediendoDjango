@@ -12,7 +12,13 @@
 
     <h1 class="title">{{ title }}</h1>
 
-    {{ mi_variable }}
+    <p>{{ mi_variable }}</p>
+
+    {% if nombre %}
+        <p> {{ nombre }}</p>
+    {% else %}
+        <strong>El nombre no existe</strong>
+    {% endif %}
 
     <p>Años hasta el 2050:</p>
 
