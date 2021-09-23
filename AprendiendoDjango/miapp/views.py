@@ -21,11 +21,12 @@ layout = """
     <hr/>
 """
 def index(request):
-    html = """
+    """
+    html = ""
         <h1>Inicio</h1>
         <p>Años hasta el 2050:</p>
         <ul>
-    """
+    ""
     year = 2021
     while year <= 2050:
 
@@ -35,6 +36,10 @@ def index(request):
         year += 1
 
     html += "</ul>"
+    """
+
+    year = 2021
+    hasta = range(year, 2051)
 
     lenguajes = ['Javascript', 'Python', 'C', 'C#', 'PHP']
 
@@ -42,7 +47,8 @@ def index(request):
     return render(request, 'index.html', {
         'title': 'Inicio',
         'mi_variable': 'Soy un dato que esta en la vista',
-        'lenguajes':  lenguajes
+        'lenguajes':  lenguajes,
+        'years': hasta
     })
 
 def hola_mundo(request):
